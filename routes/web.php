@@ -24,6 +24,10 @@ Route::get('sheets/teacherCreate', 'SheetController@teacherCreate')->name('sheet
 
 Route::post('sheets/store', 'SheetController@store')->name('sheets.store');
 
-Route::get('sheets/studentEdit', 'SheetController@studentEdit')->name('sheets.studentEdit');
+Route::get('sheets/{param}/studentEdit', 'SheetController@studentEdit')->name('sheets.studentEdit');
 
 Route::put('sheets/{param}/studentUpdate', 'SheetController@studentUpdate')->name('sheets.studentUpdate');
+
+Route::get('sheets/unitCreate', 'SheetController@unitCreate')->name('sheets.unitCreate');
+
+Route::post('sheets/unitStore', 'SheetController@unitStore')->name('sheets.unitStore');
