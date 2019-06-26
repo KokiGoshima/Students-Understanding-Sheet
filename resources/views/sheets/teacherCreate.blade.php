@@ -5,8 +5,6 @@
 	<a href="{{ route('sheets.unitCreate') }}" class = "btn btn-outline-primary">単元を追加する</a>
 	<form action = "{{ route('sheets.store')}}" method="post">
 		@csrf
-		<p></p>
-		<p>日付を入力</p>
 		<input type="text" name = "date">
 	@foreach($units as $unit)
 		<div class="m-4 p-4 border border-primary">

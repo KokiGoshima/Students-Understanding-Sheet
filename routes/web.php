@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/', 'SheetController@index')->name('sheets.index');
 
-Route::get('sheets/teacherCreate', 'SheetController@teacherCreate')->name('sheets.teacherCreate');
+Route::post('sheets/teacherCreate', 'SheetController@teacherCreate')->name('sheets.teacherCreate');
 
 Route::post('sheets/store', 'SheetController@store')->name('sheets.store');
 
@@ -31,3 +31,8 @@ Route::put('sheets/{param}/studentUpdate', 'SheetController@studentUpdate')->nam
 Route::get('sheets/unitCreate', 'SheetController@unitCreate')->name('sheets.unitCreate');
 
 Route::post('sheets/unitStore', 'SheetController@unitStore')->name('sheets.unitStore');
+
+Route::get('sheets/{param}/teacherEdit', 'SheetController@teacherEdit')->name('sheets.teacherEdit');
+
+Route::get('sheets/decideDay', 'SheetController@decideDay')->name('sheets.decideDay');
+

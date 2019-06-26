@@ -16,18 +16,27 @@ class SheetController extends Controller
     	return view("sheets.index", ["days" => $days]);
     }
 
-    public function teacherCreate(){
-    	$units = Unit::all();
-    	return view("sheets.teacherCreate", ["units" => $units]);
-    }
-
-    public function store(CreateSheet $request){
-    	
+    public function teacherCreate(CreateSheet $request){
     	$day = new Day();
     	$day->date = $request->date;
     	$day->save();
-    	return redirect()->route("sheets.index");
+    	// dd(123);
+    	return redirect()->route("sheets.teacherEdit", ["id" => $day->id]);
     }
+
+    public function teacherEdit($id){
+    	$day = Day::find($id);
+    	$units = $day->units;
+    	dd(123);
+    }
+
+    // public function store(CreateSheet $request){
+    	
+    // 	$day = new Day();
+    // 	$day->date = $request->date;
+    // 	$day->save();
+    // 	return redirect()->route("sheets.index");
+    // }
 
     public function unitCreate(){
     	return view("sheets.unitCreate");
@@ -45,5 +54,9 @@ class SheetController extends Controller
     public function studentEdit($id){
     	$units = Unit::all();
     	return view('sheets.studentCreate', ["units" => $units]);
+    }
+
+    public function decideDay(){
+    	return view("sheets.decideDay");
     }
 }
