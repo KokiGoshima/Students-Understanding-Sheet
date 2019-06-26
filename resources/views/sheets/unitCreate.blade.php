@@ -4,6 +4,7 @@
 
 <p>単元を記入</p>
 
+{{-- <form action="{{ route('sheets.unitStore') }}" method="post"> --}}
 <form action="{{ route('sheets.unitStore') }}" method="post">
 @csrf
 <p>単元名(if文など)</p>

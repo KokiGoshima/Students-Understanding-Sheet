@@ -27,7 +27,7 @@ class SheetController extends Controller
     public function teacherEdit($id){
     	$day = Day::find($id);
     	$units = $day->units;
-    	dd(123);
+    	return view("sheets.teacherCreate", ["units" => $units]);
     }
 
     // public function store(CreateSheet $request){
