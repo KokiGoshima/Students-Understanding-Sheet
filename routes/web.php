@@ -11,10 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'SheetController@index')->name('sheets.index');
+
+Route::get('sheets/teacherCreate', 'SheetController@teacherCreate')->name('sheets.teacherCreate');
+
+Route::post('sheets/store', 'SheetController@store')->name('sheets.store');
+
+Route::get('sheets/studentEdit', 'SheetController@studentEdit')->name('sheets.studentEdit');
+
+Route::put('sheets/{param}/studentUpdate', 'SheetController@studentUpdate')->name('sheets.studentUpdate');
