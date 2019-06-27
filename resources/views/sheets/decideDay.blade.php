@@ -9,6 +9,8 @@
 		<br>
 		<p></p>
 		<button type="submit">新規作成</button>
+		<a href="{{ route('sheets.index') }}">戻る</a>
+
 {{-- 		@endif --}}
 
 	</form>

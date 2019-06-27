@@ -2,7 +2,7 @@
 
 @section("content")
 
-	<a href="{{ route('sheets.decideDay') }}" class = "btn btn-outline-primary">新規作成</a>
+	<a href="{{ route('sheets.decideDay') }}" class = "btn btn-outline-primary">新規作成(講師側で作成)</a>
 	@foreach($days as $day)
 	<div class="m-4 p-4 border border-primary">
 		<p>{{ $day["date"] }}</p>

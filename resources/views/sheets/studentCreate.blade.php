@@ -24,5 +24,11 @@
 		</div>
 	@endforeach
 
+	<button>
+		講師に提出する
+	</button>
+
+	<a href="{{ route('sheets.index') }}">戻る</a>
+
 
 @endsection
